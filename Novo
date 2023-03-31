@@ -1,17 +1,14 @@
-abstract class Figura {
-  late String
-      _cor; 
-  Figura(this._cor);
-
+abstract class Fig {
+  late String _cor; 
+  Fig(this._cor);
   void set setCor(String cor) {
     this._cor = cor;
   }
-
   String get cor {
     return this._cor;
   }
 }
-class Retangulo extends Figura {
+class Retangulo extends Fig {
   late double _lado1;
   late double _lado2;
 
@@ -24,11 +21,11 @@ class Retangulo extends Figura {
   void set setLado2(double lado2) {
     this._lado2 = lado2;
   }
-  int funcaoSoma1(num1, num2) =>
+  int funcaoad1(num1, num2) =>
       num1 + num2; 
 
   
-  int funcaoSoma2(num1, num2) {
+  int funcaoad2(num1, num2) {
     return num1 + num2;
   }
   double get lado1 => this._lado1;
@@ -39,14 +36,14 @@ class Retangulo extends Figura {
   }
   String toString() {
     return '''
-      ----- Retângulo -----
+      Retângulo:
       lado 1: ${this._lado1}
       lado 2: ${this._lado2}
       área: ${this.area()}
     ''';
   }
 }
-class Triangulo extends Figura {
+class Triangulo extends Fig {
   late double _base;
   late double _altura;
 
@@ -68,7 +65,7 @@ class Triangulo extends Figura {
 
   String toString() {
     return '''
-      ----- Triângulo -----
+      Triângulo:
       base: ${this._base}
       altura: ${this._altura}
       área: ${this.area()}
@@ -76,7 +73,7 @@ class Triangulo extends Figura {
   }
 }
 
-class Circulo extends Figura {
+class Circulo extends Fig {
   late double _raio;
 
   Circulo(this._raio, String cor) : super(cor);
@@ -97,7 +94,7 @@ class Circulo extends Figura {
 
   String toString() {
     return '''
-      ----- Círculo -----
+      Círculo: 
       raio: ${this.getRaio()}
       diâmetro: ${this.getDiametro()}
       área: ${this.area()}
@@ -110,7 +107,7 @@ class Quadrado extends Retangulo {
 
   String toString() {
     return '''
-      ----- Quadrado -----
+      Quadrado:
       lados: ${this.lado1}
       área: ${this.area()}
     ''';
